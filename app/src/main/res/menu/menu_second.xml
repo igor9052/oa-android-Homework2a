@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ua.com.igorka.oa.android.homework2.SecondActivity">
+    <item android:id="@+id/third_activity" android:title="@string/title_activity_third"
+        android:orderInCategory="200" app:showAsAction="never" />
+
+    <item android:id="@+id/exit" android:title="@string/exit"
+        android:orderInCategory="300" app:showAsAction="never" />
+</menu>

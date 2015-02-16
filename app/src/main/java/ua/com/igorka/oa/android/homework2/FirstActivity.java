@@ -1,10 +1,8 @@
 package ua.com.igorka.oa.android.homework2;
 
 import android.content.Intent;
-import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -23,18 +21,16 @@ public class FirstActivity extends ActionBarActivity {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("title", String.valueOf(((TextView)findViewById(R.id.title)).getText()));
+        outState.putString("title", String.valueOf(((TextView) findViewById(R.id.title)).getText()));
     }
 
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (savedInstanceState != null) {
-            String title = savedInstanceState.getString("title");
-            if (title != null) {
-                TextView textView = (TextView)findViewById(R.id.title);
-                textView.setText(title);
-            }
+        String title = savedInstanceState.getString("title");
+        if (title != null) {
+            TextView textView = (TextView) findViewById(R.id.title);
+            textView.setText(title);
         }
     }
 
@@ -61,9 +57,14 @@ public class FirstActivity extends ActionBarActivity {
             showThirdActivity();
             return true;
         }
-        if (id == R.id.change_title) {
-            TextView textView = (TextView)findViewById(R.id.title);
+        if (id == R.id.change_text) {
+            TextView textView = (TextView) findViewById(R.id.title);
             textView.setText(HELLO_IGOR);
+            return true;
+        }
+        if (id == R.id.send_activity) {
+            Intent intent = new Intent(this, SendActivity.class);
+            startActivity(intent);
             return true;
         }
 

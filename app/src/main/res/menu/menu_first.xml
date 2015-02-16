@@ -7,7 +7,10 @@
     <item android:id="@+id/third_activity" android:title="@string/title_activity_third"
         android:orderInCategory="300"/>
 
-    <item android:id="@+id/change_title" android:title="@string/change_title"
+    <item android:id="@+id/change_text" android:title="@string/change_text"
+        android:orderInCategory="400"/>
+
+    <item android:id="@+id/send_activity" android:title="@string/open_send_activity"
         android:orderInCategory="400"/>
 
 </menu>

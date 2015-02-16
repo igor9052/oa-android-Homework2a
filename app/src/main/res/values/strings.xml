@@ -7,6 +7,10 @@
     <string name="title_activity_second">Second Activity</string>
     <string name="title_activity_third">Third Activity</string>
     <string name="exit">Exit</string>
-    <string name="change_title">Change title</string>
+    <string name="change_text">Change text</string>
+    <string name="title_activity_send_to_shared">SendToSharedActivity</string>
+    <string name="send">Send</string>
+    <string name="write_something">Write something:</string>
+    <string name="open_send_activity">Open send activity</string>
 
 </resources>

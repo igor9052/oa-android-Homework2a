@@ -29,6 +29,15 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
-            android:onClick="onClickSendButton"/>
+            android:onClick="onClickSendExplicitButton"/>
+
+        <Button android:id="@+id/sendButtonImplicit" android:text="@string/send_through_implicit_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edit"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:onClick="onClickSendImplicitButton"/>
     </LinearLayout>
 </RelativeLayout>

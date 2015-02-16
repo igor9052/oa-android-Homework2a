@@ -1,5 +1,6 @@
 package ua.com.igorka.oa.android.homework2;
 
+import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -44,10 +45,26 @@ public class SendActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void onClickSendButton(View view) {
+    public void onClickSendExplicitButton(View view) {
         Intent intent = new Intent();
         intent.setComponent(new ComponentName("ua.com.igorka.oa.android.homework2b", "ua.com.igorka.oa.android.homework2b.activity.SharedActivity"));
         intent.putExtra("STRING_DATA", editText.getText().toString());
-        startActivity(intent);
+        try {
+            startActivity(intent);
+        }
+        catch (ActivityNotFoundException e) {
+
+        }
+
+    }
+
+    public void onClickSendImplicitButton(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_TEXT, editText.getText().toString());
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(Intent.createChooser(intent, getString(R.string.choose_app)));
+        }
+
     }
 }

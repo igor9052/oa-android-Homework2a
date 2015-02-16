@@ -9,8 +9,10 @@
     <string name="exit">Exit</string>
     <string name="change_text">Change text</string>
     <string name="title_activity_send_to_shared">SendToSharedActivity</string>
-    <string name="send">Send</string>
+    <string name="send">Send through explicit intent</string>
     <string name="write_something">Write something:</string>
     <string name="open_send_activity">Open send activity</string>
+    <string name="send_through_implicit_intent">Send through implicit intent</string>
+    <string name="choose_app">Choose app</string>
 
 </resources>
